@@ -18,12 +18,10 @@ export class AlbumComponent implements OnInit {
   handleClick(){
     this.isInfoLike = true;
     if(!this.album.like) {
-      console.log("added");
       this.album.like = true;
       this.isLike = true;
       this.likesService.setAlbum(this.album);
     } else {
-      console.log("delete");
       this.album.like = false
       this.isLike = false;
       this.likesService.removeAlbum(this.album);

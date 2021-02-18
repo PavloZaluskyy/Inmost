@@ -1,4 +1,4 @@
-<app-header ></app-header>
+<app-header [changedLikeCounter]="changedLikeCounter"></app-header>
 <div class="container">
     <div *ngIf="isEmpty"><app-loader></app-loader></div>
     <ul class="row" *ngIf="!isEmpty">

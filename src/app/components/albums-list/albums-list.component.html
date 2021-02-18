@@ -1,8 +1,8 @@
-<app-header></app-header>
+<app-header [changedLikeCounter]="changedLikeCounter"></app-header>
 <div class="container">
     <div *ngIf="isEmpty"><app-loader></app-loader></div>
     <ul class="row" *ngIf="!isEmpty">
-        <app-album *ngFor="let album of albums" [album]="album"></app-album>
+        <app-album *ngFor="let album of albums" (onChanged)="onChanged($event)" [album]="album"></app-album>
     </ul>
 </div>
 

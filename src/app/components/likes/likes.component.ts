@@ -18,8 +18,7 @@ export class LikesComponent implements OnInit {
     setTimeout(()=>{
       this.favoriteAlbums = this.likesService.getAlbums(); 
     },1000);
-    
-    //this.changedLikeCounter = this.likesService.getAlbums().length; 
+    this.changedLikeCounter = this.likesService.getAlbums().length || 0; 
   }
 
 

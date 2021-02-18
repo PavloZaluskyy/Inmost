@@ -7,7 +7,7 @@ import { LikesService } from "../../shared/services/likes.service";
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  changedLikeCounter:number = 0;
+  @Input() changedLikeCounter:number = 0;
 
   constructor(private likesService: LikesService) { }
 

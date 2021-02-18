@@ -15,7 +15,7 @@ export class LikesService {
   }
 
   removeAlbum(album:Album){
-    this.yourFavoriteAlbums = this.yourFavoriteAlbums.filter(elem => elem !== album);
+    this.yourFavoriteAlbums = this.yourFavoriteAlbums.filter(elem => elem.name !== album.name || elem.artist['name'] !== album.artist['name']);
     localStorage.setItem('yourFavoriteAlbums', JSON.stringify(this.yourFavoriteAlbums));
   }
 
@@ -24,6 +24,7 @@ export class LikesService {
       this.yourFavoriteAlbums =  JSON.parse(localStorage.getItem('yourFavoriteAlbums'));
       return this.yourFavoriteAlbums;
     }
+    return [];
   }
   constructor() { }
 }
