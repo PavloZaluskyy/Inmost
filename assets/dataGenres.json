@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "url": "rock",
+        "name": "ROCK",
+        "color": "#E92B2D",
+        "img": "assets/img/rock.jpg" 
+    },
+    {
+        "id": 2,
+        "name": "METAL",
+        "url": "metal",
+        "color": "#343642",
+        "img": "assets/img/metal.jpg" 
+    },
+    {
+        "id": 3,
+        "url": "pop",
+        "name": "POP",
+        "color": "#053050",
+        "img": "assets/img/pop.jpg" 
+    },
+    {
+        "id": 4,
+        "name": "JAZZ",
+        "url": "jazz",
+        "color": "#6594FE",
+        "img": "assets/img/jazz.jpg" 
+    },
+    {
+        "id": 5,
+        "name": "RAP",
+        "url": "rap",
+        "color": "#152CB8",
+        "img": "assets/img/rap.jpg" 
+    },
+    {
+        "id": 6,
+        "name": "ELECTRO",
+        "url": "electro",
+        "color": "#00EE74",
+        "img": "assets/img/electro.jpg" 
+    }
+]
