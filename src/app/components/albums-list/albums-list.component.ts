@@ -12,7 +12,12 @@ import { LikesService } from "../../shared/services/likes.service";
 export class AlbumsListComponent implements OnInit {
   genre:string;
   favoriteAlbums: Album[];
-  changedLikeCounter: number
+  
+  viewAlbums: any = false;
+  dontFoundAlbums = false;
+  searchEnter = '';
+
+  changedLikeCounter: number;
   isEmpty:boolean = true;
   albums: any[]
   constructor(
@@ -21,6 +26,25 @@ export class AlbumsListComponent implements OnInit {
     private likesService: LikesService) {
     this.genre = activateRoute.snapshot.params['genre']; 
    }
+
+   setSearchMethod(event) {
+    this.dontFoundAlbums = true;
+    this.viewAlbums = [];
+    if(event === ''){
+      this.dontFoundAlbums = false; 
+    }
+    for (const key of this.albums){
+      if (key.name.toLowerCase().search(event.toLowerCase().trim()) !== -1) {
+        this.dontFoundAlbums = false;
+        this.viewAlbums.push(key);
+      } else {
+        this.searchEnter = event;
+      }
+    } 
+    console.log(this.dontFoundAlbums);
+    
+  }
+
    onChanged(increased:any){
     this.changedLikeCounter = this.likesService.getAlbums().length; 
   }

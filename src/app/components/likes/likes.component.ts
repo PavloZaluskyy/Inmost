@@ -14,6 +14,27 @@ export class LikesComponent implements OnInit {
   isInfoLike: boolean = false;
   isLike: boolean  = false;
 
+
+  viewAlbums: any = false;
+  dontFoundAlbums = false;
+  searchEnter = '';
+
+  setSearchMethod(event) {
+    this.dontFoundAlbums = true;
+    this.viewAlbums = [];
+    if(event === ''){
+      this.dontFoundAlbums = false; 
+    }
+    for (const key of this.favoriteAlbums){
+      if (key.name.toLowerCase().search(event.toLowerCase().trim()) !== -1) {
+        this.dontFoundAlbums = false;
+        this.viewAlbums.push(key);
+      } else {
+        this.searchEnter = event;
+      }
+    } ;
+  }
+
   onChanged(increased:any){
     setTimeout(()=>{
       this.favoriteAlbums = this.likesService.getAlbums(); 

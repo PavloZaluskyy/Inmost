@@ -1,8 +1,22 @@
-<app-header [changedLikeCounter]="changedLikeCounter"></app-header>
+<app-header (searchText)="setSearchMethod($event)" [changedLikeCounter]="changedLikeCounter"></app-header>
 <div class="container">
-    <div *ngIf="isEmpty"><app-loader></app-loader></div>
-    <ul class="row" *ngIf="!isEmpty">
-        <app-album *ngFor="let album of albums" (onChanged)="onChanged($event)" [album]="album"></app-album>
-    </ul>
+    <div *ngIf="!dontFoundAlbums">
+        <div *ngIf="!viewAlbums">
+            <div *ngIf="isEmpty"><app-loader></app-loader></div>
+            <ul class="row" *ngIf="!isEmpty">
+                <app-album *ngFor="let album of albums" (onChanged)="onChanged($event)" [album]="album"></app-album>
+            </ul>
+        </div>
+        <div *ngIf="viewAlbums">
+            <div *ngIf="isEmpty"><app-loader></app-loader></div>
+            <ul class="row" *ngIf="!isEmpty">
+                <app-album *ngFor="let album of viewAlbums" (onChanged)="onChanged($event)" [album]="album"></app-album>
+            </ul>
+        </div>
+    </div>
+    <div *ngIf="dontFoundAlbums">
+        <p class="dontFoundAlbums">Sorry, no albums was found! </p>
+        <p class="dontFoundAlbums"> Check spelling - {{searchEnter}}</p>
+    </div>
 </div>
 

@@ -68,7 +68,13 @@ li{
        }
        .redText{color: #FD4080;}
    }
-
+   .dontFoundAlbums{
+    font-size: 23px;
+    text-align: center;
+    margin: 0 10px;
+    word-break: break-all;
+    color: #fff;
+}
 
 @media (min-width: 600px) and (max-width: 991px) {
     li {

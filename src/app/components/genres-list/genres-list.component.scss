@@ -4,10 +4,11 @@
    margin-top: 10%;
 }
 .card{
-    height: 35vh;
+    min-height: 35vh;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    //flex-wrap: wrap;
+    
     cursor: pointer;
     justify-content: space-between;
     &:hover{
@@ -18,6 +19,8 @@
         width: 100%;
     }
     .card-image{
-        margin-left: auto;
+        position: relative;
+        z-index: 9000;
+        align-self: flex-end;
     }
 }
