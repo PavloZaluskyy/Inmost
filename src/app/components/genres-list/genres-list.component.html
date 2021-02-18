@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="contentWrapper">
+    <ul class="row">
+        <li  *ngFor="let item of genres" class="col s12 m6 l4">
+            <div [routerLink]="['album', item.url]" >
+              <div [ngStyle]="{'background': item.color}" class="card">
+                <span class="card-title">{{item.name}}</span>
+                <div class="card-image">
+                  <img [src]="item.img">
+                </div>
+              </div>
+            </div>
+        </li>
+    </ul>
+  </div>
+</div>

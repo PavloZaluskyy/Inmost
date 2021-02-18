@@ -1,0 +1,20 @@
+<li  class="col ">
+    <div class="card view view-first">
+        <div class="card-image">
+          <img [src]="album.image[3]['#text']">
+        </div>
+        <div class="mask" >
+            <h3>{{album.name}}</h3>
+            <h4>{{album.artist.name}}</h4>
+            <i (click)="handleClick()" *ngIf="!isLike" class="fa fa-heart-o" aria-hidden="true"></i>
+            <i (click)="handleClick()" class="fa fa-heart" *ngIf="isLike" aria-hidden="true"></i>
+        </div>
+        <div class="infoLike" *ngIf="isInfoLike">
+            <span class="infoAboutLike">{{album.artist.name}}: {{album.name}}</span>
+            <span *ngIf="isLike" class="redText">Like</span>
+            <span *ngIf="!isLike" class="redText">Dislike</span>
+        </div>
+    </div>
+</li>
+
+

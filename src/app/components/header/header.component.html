@@ -1,0 +1,14 @@
+<header>
+    <div class="container">
+        <div class="headerWrapper">
+            <div class="leftPart">
+                <h3 routerLink="">Back</h3>
+                <input type="text" placeholder="Search aulbum">
+            </div>
+            <div class="rightPart">
+                <i routerLink="/likes/" class="fa fa-heart like" aria-hidden="true"></i>
+                <span *ngIf="changedLikeCounter" class="countLikes">{{changedLikeCounter}}</span>
+            </div>
+        </div>    
+    </div>
+</header>

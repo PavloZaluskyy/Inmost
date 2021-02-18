@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Inmost"
+    }
+  },
+  "defaultProject": "Inmost",
+  "cli": {
+    "analytics": "d1bc7f3d-cce5-463b-ad85-fdfd8dcfb390"
+  }
 }

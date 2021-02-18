@@ -1,1 +1,36 @@
-/* You can add global styles to this file, and also import other style files */
+:root{
+    --primary-color: #191818;
+}
+
+*{
+    margin:  0;
+    padding:  0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+    line-height:  1.6;
+    background: var(--primary-color);
+    color: #fff;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+
+    &:hover{
+        color: red;
+    }
+}
+
+ul{
+    list-style: none;   
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+

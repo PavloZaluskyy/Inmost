@@ -1,0 +1,7 @@
+<app-header ></app-header>
+<div class="container">
+    <div *ngIf="isEmpty"><app-loader></app-loader></div>
+    <ul class="row" *ngIf="!isEmpty">
+        <app-album *ngFor="let album of favoriteAlbums" (onChanged)="onChanged($event)" [album]="album"></app-album>
+    </ul>
+</div>

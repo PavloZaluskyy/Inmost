@@ -1,0 +1,50 @@
+.container{
+    min-width: 96%;
+    margin: 0 2%;
+}
+.headerWrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+
+    .leftPart{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+
+        h3{
+         margin-top: 0;
+         margin-right: 3rem;
+         cursor: pointer;
+        }
+        input{
+            cursor: pointer;
+            min-width: 350px;
+            width: 70%;
+            padding: .5rem;
+            background: #fff;
+            border-radius: .6rem;
+            border: none!important;
+        }
+    }
+    .rightPart{
+        display: flex;
+        justify-content: flex-end;
+        .like{
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        .countLikes{
+            position: relative;
+            top: -15px;
+            left: -5px;
+            background: #4051B6;
+            border-radius: 50%;
+            padding: .2rem .4rem;
+        }
+    }
+
+}
