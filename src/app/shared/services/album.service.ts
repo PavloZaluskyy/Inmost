@@ -7,7 +7,8 @@ import { Album } from "../interfaces/album";
   providedIn: 'root'
 })
 export class AlbumService {
-  private ATOKEN = '22e5dcb7293a23da484afeacce80c247'
+  //'22e5dcb7293a23da484afeacce80c247'
+  private ATOKEN = '9417fbe8000e7d4b967deecc30524c8a';
   constructor(private http: HttpClient) { }
 
   getAlbum(genre) :Observable<Album[]>{
