@@ -8,7 +8,9 @@ import { catchError, map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class AlbumService {
-  private ATOKEN = '05dd98f8d26294ae45ab788a24a12bdb'
+  //'22e5dcb7293a23da484afeacce80c247'
+  private ATOKEN = '9417fbe8000e7d4b967deecc30524c8a';
+  
   constructor(private http: HttpClient) { }
 
   getAlbum(genre) :Observable<Album[]>{
